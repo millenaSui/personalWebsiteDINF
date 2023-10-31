@@ -1,0 +1,247 @@
+/*Definições de fontes locais*/
+@font-face {
+    font-family: 'Ginqail';
+    src: local('Ginqail'), url('/home/millenasui/Downloads/personalWebsiteDINF-main/fonts/Ginqail-Font.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MPLUS1';
+    src: local('MPLUS1'), url('/home/millenasui/Downloads/personalWebsiteDINF-main/fonts/MPLUS1-VariableFont_wght.ttf') format('truetype');
+}
+
+/*Configurações gerais da página*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(
+        rgba(36, 33, 30, 0.5),
+        rgba(36, 33, 30, 0.5)
+    ),
+    url("../background.png");
+    background-size: 100%;
+}
+
+/*Tags da header divididas em três 
+para alinhamento correto*/
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 20px;
+    border-bottom: 1px solid #EED4D4;
+}
+
+.logo {
+    font-family: 'Ginqail', serif;
+    font-size: 40px;
+    margin-top: 30px;
+}
+
+.menu {
+    text-align: center;
+    width: 45%;
+    padding-top: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.left-menu {
+    font-size: 20px;
+    text-align: left;
+    padding-left: 10%;
+}
+
+.right-menu {
+    font-size: 20px;
+    text-align: right;
+    padding-right: 10%;
+}
+
+a {
+    font-family: 'MPLUS1', sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    color: #EED4D4;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #EED4D4; /* Cor da linha */
+    padding-bottom: 2px; /* Distância da linha em relação ao texto */
+}
+
+/*Configurações de texto*/
+.general-text {
+    margin: 0 6%;
+    margin-top: 10%;
+}
+
+.title-text {
+    font-family: 'Ginqail', serif;
+    font-size: 60px;
+    text-align: center;
+    padding-top: 6%;
+    color: #EED4D4;
+}
+
+.subtitle-text {
+    font-family: 'Ginqail', serif;
+    font-size: 35px;
+    text-align: center;
+    padding-top: 7%;
+    color: #EED4D4;
+}
+
+.subtitle-modal {
+    font-family: 'MPLUS1', sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: #EED4D4;
+    position: relative;
+}
+
+.subtitle-modal::after {
+    content: "";
+    width: 500px;
+    height: 1px;
+    background: #EED4D4; /* Cor da linha */
+    position: absolute;
+    bottom: -2px; /* Coloca a linha 2px abaixo do texto */
+    left: 50%; /* Centraliza a linha em relação ao texto */
+    transform: translateX(-50%); /* Centraliza a linha horizontalmente */
+}
+
+.description-text {
+    font-family: 'MPLUS1', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 7%;
+    padding: 0 30%;
+    color: #EED4D4;
+}
+
+.description-text-abaut {
+    font-family: 'MPLUS1', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 7%;
+    padding: 0 25%;
+    color: #EED4D4;
+}
+
+/*configurações das imagens de projetos*/
+.image-columns {
+    display: flex;
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+.column img {
+    max-width: 100%;
+    cursor: pointer;
+}
+
+/*configurações de modal*/
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+}
+
+.modal .subtitle-text {
+    font-size: 50px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.modal .description-text {
+    font-size: 20px; /* Tamanho da fonte para a classe description-text */
+}
+
+.modal img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Mantém a proporção da imagem */
+}
+
+.modal-trigger {
+    margin-top: 10%;
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+
+.modal-trigger:hover {
+    filter: grayscale(0%);
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+    color: #EED4D4;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+/*Tags do rodapé*/
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    margin: 0 10px;
+    margin-top: 20px;
+}
+
+.links {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+/*Retângulo em torno dos links de currículo*/
+.rounded-link {
+    display: inline-block;
+    padding: 10px 27px;
+    background-color: transparent;
+    border: 2px solid #EED4D4;
+    border-radius: 45px;
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;  
+    color: #EED4D4;
+    margin: 0 15px;
+}

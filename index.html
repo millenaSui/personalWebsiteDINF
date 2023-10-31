@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Millena Suiani Costa</title>
+        <meta name="author" content="Millena Suiani Costa">
+        <link rel="SHORTCUT ICON" href="logo.png">
+        <meta name="description" content="Página pessoal de Millena Suiani Costa.">
+        <meta name="keywords" content="Millena, Suiani, Costa, UFPR, Universidade Federal do Paraná, Ciência da Computação, Computação, BCC"/>
+        <link href="css/style.css" rel="stylesheet"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;800&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <nav class="menu left-menu">
+                <a href="./sobre.html">SOBRE</a>
+            </nav>
+            <a href="./index.html" class="logo"><p>MSC</p></a>
+            <nav class="menu right-menu">
+                <a href="./projetos.html">PROJETOS</a>
+            </nav>
+        </header>
+
+        <section class="general-text">
+            <div class="title-text">
+                <h1>Millena Suiani Costa</h1>
+            </div>
+            <div class="description-text">
+                <p>DISCENTE DE CIÊNCIA DA COMPUTAÇÃO NA UNIVERSIDADE FEDERAL DO PARANÁ (UFPR), INTEGRANTE DO PET COMPUTAÇÃO E DO GRUPO CAPIMARA (COM PARTICIPAÇÃO ATIVA EM MARATONAS DE PROGRAMAÇÃO).</p>
+            </div>
+            <nav class="links">
+                <div id="curriculum-modal" class="modal">
+                    <img src="curriculum.png" alt="curriculum">
+                    <script src="script.js"></script>
+                    <span class="close-modal" data-modal="curriculum-modal">&times;</span>
+                </div>
+                <a href="#" id="curriculum-link" target="_blank" class="rounded-link">CURRICULUM VITAE</a>
+                <a href="http://lattes.cnpq.br/5284996494544920" target="_blank" class="rounded-link">CURRÍCULO LATTES</a>
+            </nav>
+        </section>
+
+        <footer>
+            <a href="//www.linkedin.com/in/millena-costa-" target="_blank"><img src="linkedin.png" class="linkedin"/></a>
+            <a href="//github.com/millenaSui" target="_blank"><img src="git.png" class="github"/></a>
+            <a href="mailto:millena.sui@outlook.com" target="_blank"><img src="email.png" class="email"/></spam></p>
+        </footer>
+
+        <script>
+
+            // Adicione um evento de clique ao link "CURRICULUM VITAE"
+            document.getElementById("curriculum-link").addEventListener('click', function(e) {
+                e.preventDefault(); // Impede o comportamento padrão do link
+                const modalId = 'curriculum-modal'; // Altere para o modal desejado
+                openModal(modalId);
+            });
+
+            //Função para abrir modal
+            function openModal(modalId) {
+                document.getElementById(modalId).style.display = "block";
+            }
+    
+            // Função para fechar modal
+            function closeModal(modalId) {
+                document.getElementById(modalId).style.display = "none";
+            }
+    
+            // Adicione um evento de clique às imagens
+            const modalTriggers = document.querySelectorAll('.modal-trigger');
+            modalTriggers.forEach((trigger) => {
+                trigger.addEventListener('click', () => {
+                    const modalId = trigger.getAttribute('data-modal');
+                    openModal(modalId);
+                });
+            });
+    
+            // Adicione um evento de clique para fechar os modais
+            const closeButtons = document.querySelectorAll('.close-modal');
+            closeButtons.forEach((button) => {
+                button.addEventListener('click', () => {
+                    const modalId = button.getAttribute('data-modal');
+                    closeModal(modalId);
+                });
+            });
+        </script>
+    </body>
+</html>
