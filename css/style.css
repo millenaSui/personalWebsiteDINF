@@ -70,8 +70,8 @@ a {
 
 .menu a {
     text-decoration: none;
-    color: #EED4D4; /* Cor da linha */
-    padding-bottom: 2px; /* Distância da linha em relação ao texto */
+    color: #EED4D4;
+    padding-bottom: 2px;
 }
 
 /*Configurações de texto*/
@@ -105,17 +105,6 @@ a {
     padding-bottom: 2%;
     color: #EED4D4;
     position: relative;
-}
-
-.subtitle-modal::after {
-    content: "";
-    width: 500px;
-    height: 1px;
-    background: #EED4D4; /* Cor da linha */
-    position: absolute;
-    bottom: -2px; /* Coloca a linha 2px abaixo do texto */
-    left: 50%; /* Centraliza a linha em relação ao texto */
-    transform: translateX(-50%); /* Centraliza a linha horizontalmente */
 }
 
 .description-text {
@@ -168,7 +157,7 @@ a {
     z-index: 1;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(15px);
 }
 
