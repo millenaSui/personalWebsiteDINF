@@ -1,12 +1,12 @@
 /*Definições de fontes locais*/
 @font-face {
     font-family: 'Ginqail';
-    src: local('Ginqail'), url('/home/millenasui/Downloads/personalWebsiteDINF-main/fonts/Ginqail-Font.ttf') format('truetype');
+    src: local('Ginqail'), url('../fonts/Ginqail-Font.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'MPLUS1';
-    src: local('MPLUS1'), url('/home/millenasui/Downloads/personalWebsiteDINF-main/fonts/MPLUS1-VariableFont_wght.ttf') format('truetype');
+    src: local('MPLUS1'), url('../fonts/MPLUS1-VariableFont_wght.ttf') format('truetype');
 }
 
 /*Configurações gerais da página*/
@@ -21,7 +21,7 @@ body {
         rgba(36, 33, 30, 0.5),
         rgba(36, 33, 30, 0.5)
     ),
-    url("../background.png");
+    url("../background-2.png");
     background-size: 100%;
 }
 
@@ -82,7 +82,7 @@ a {
 
 .title-text {
     font-family: 'Ginqail', serif;
-    font-size: 60px;
+    font-size: 70px;
     text-align: center;
     padding-top: 6%;
     color: #EED4D4;
