@@ -1,12 +1,12 @@
 /*Definições de fontes locais*/
 @font-face {
     font-family: 'Ginqail';
-    src: local('Ginqail'), url('../fonts/Ginqail-Font.ttf') format('truetype');
+    src: local('Ginqail'), url('./fonts/Ginqail-Font.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'MPLUS1';
-    src: local('MPLUS1'), url('../fonts/MPLUS1-VariableFont_wght.ttf') format('truetype');
+    src: local('MPLUS1'), url('./fonts/MPLUS1-VariableFont_wght.ttf') format('truetype');
 }
 
 /*Configurações gerais da página*/
@@ -18,60 +18,53 @@
 
 body {
     background: linear-gradient(
-        rgba(36, 33, 30, 0.5),
-        rgba(36, 33, 30, 0.5)
+        rgba(200, 184, 169, 0.179),
+        rgba(200, 184, 169, 0.179)
     ),
-    url("../background-2.png");
-    background-size: 100%;
+    url("../background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-/*Tags da header divididas em três 
-para alinhamento correto*/
+/*Configurações de cabeçalho*/
 header {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 0 20px;
-    border-bottom: 1px solid #EED4D4;
+    padding: 0 30px;
+    border-bottom: 1px solid #332929;
+    /* background-color: #332929; */
 }
 
 .logo {
     font-family: 'Ginqail', serif;
     font-size: 40px;
-    margin-top: 30px;
+    margin-top: 25px;
+    padding-left: 5%;
 }
 
 .menu {
     text-align: center;
     width: 45%;
-    padding-top: 15px;
+    padding-top: 10px;
     margin-top: 15px;
     margin-bottom: 15px;
 }
 
-.left-menu {
-    font-size: 20px;
-    text-align: left;
-    padding-left: 10%;
-}
-
 .right-menu {
     font-size: 20px;
-    text-align: right;
-    padding-right: 10%;
+    padding-right: 5%;
+    display: flex;
+    justify-content: flex-end; /* Mantém os itens alinhados à direita */
+    gap: 10%; /* Ajuste esse valor para aumentar/diminuir o espaço entre as palavras */
 }
 
 a {
     font-family: 'MPLUS1', sans-serif;
-    font-weight: 400;
+    font-weight: 420;
     text-decoration: none;
-    color: #EED4D4;
-}
-
-.menu a {
-    text-decoration: none;
-    color: #EED4D4;
-    padding-bottom: 2px;
+    color: #332929;
 }
 
 /*Configurações de texto*/
@@ -85,15 +78,15 @@ a {
     font-size: 70px;
     text-align: center;
     padding-top: 6%;
-    color: #EED4D4;
+    color: #332929;
 }
 
 .subtitle-text {
     font-family: 'Ginqail', serif;
     font-size: 35px;
     text-align: center;
-    padding-top: 7%;
-    color: #EED4D4;
+    padding-top: 4%;
+    color: #332929;
 }
 
 .subtitle-modal {
@@ -103,19 +96,19 @@ a {
     text-align: center;
     padding-top: 2%;
     padding-bottom: 2%;
-    color: #EED4D4;
+    color: #332929;
     position: relative;
 }
 
 .description-text {
     font-family: 'MPLUS1', sans-serif;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 400;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 7%;
     padding: 0 30%;
-    color: #EED4D4;
+    color: #332929;
 }
 
 .description-text-abaut {
@@ -126,7 +119,7 @@ a {
     margin-top: 50px;
     margin-bottom: 7%;
     padding: 0 25%;
-    color: #EED4D4;
+    color: #332929;
 }
 
 /*configurações das imagens de projetos*/
@@ -197,7 +190,7 @@ a {
     width: 50px;
     height: 50px;
     font-size: 50px;
-    color: #EED4D4;
+    color: #332929;
     cursor: pointer;
     border-radius: 50%;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
@@ -226,11 +219,11 @@ footer a {
     display: inline-block;
     padding: 10px 27px;
     background-color: transparent;
-    border: 2px solid #EED4D4;
+    border: 2px solid #332929;
     border-radius: 45px;
     font-weight: 500;
     font-size: 14px;
     text-decoration: none;  
-    color: #EED4D4;
+    color: #332929;
     margin: 0 15px;
 }
