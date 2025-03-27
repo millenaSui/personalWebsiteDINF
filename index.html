@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title>Millena Suiani Costa</title>
         <meta name="author" content="Millena Suiani Costa">
-        <link rel="SHORTCUT ICON" href="logo.png">
+        <link rel="SHORTCUT ICON" href="./css/icons/logo.png">
         <meta name="description" content="Página pessoal de Millena Suiani Costa.">
         <meta name="keywords" content="Millena, Suiani, Costa, UFPR, Universidade Federal do Paraná, Ciência da Computação, Computação, BCC"/>
         <link href="css/style.css" rel="stylesheet"/>
@@ -15,13 +15,24 @@
     </head>
 
     <body>
-        <header>
+        <header id="main-header">
             <a href="#home" class="logo"><p>MSC</p></a>
             <nav class="menu right-menu">
                 <a href="#sobre">SOBRE</a>
                 <a href="#projetos">PROJETOS</a>
             </nav>
         </header>
+        
+        <script>
+            document.addEventListener("scroll", function () {
+                const header = document.getElementById("main-header");
+                if (window.scrollY > 50) { // Quando rolar mais de 50px
+                    header.classList.add("scrolled");
+                } else {
+                    header.classList.remove("scrolled");
+                }
+            });
+        </script>
 
         <section id="home" class="general-text">
             <div class="title-text">
@@ -31,19 +42,15 @@
                 <p>TÉCNICA EM ENGENHARIA DE DADOS | BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO NA UNIVERSIDADE FEDERAL DO PARANÁ (UFPR) EM ANDAMENTO.</p>
             </div>
             <nav class="links">
-                <div id="curriculum-modal" class="modal">
-                    <img src="curriculum.png" alt="curriculum">
-                    <span class="close-modal" data-modal="curriculum-modal">&times;</span>
-                </div>
-                <a href="#" id="curriculum-link" class="rounded-link">CURRICULUM VITAE</a>
+                <a href="https://drive.google.com/drive/folders/13M2qIuLL4PH_LBQRTVrOf1-1rnrkcQ8i?usp=sharing" id="curriculum-link" target="_blank" class="rounded-link">CURRICULUM VITAE</a>
                 <a href="http://lattes.cnpq.br/5284996494544920" target="_blank" class="rounded-link">CURRÍCULO LATTES</a>
             </nav>
         </section>
 
         <section id="links-icons" class="links-icons-section">
-            <a href="//www.linkedin.com/in/millena-costa-" target="_blank"><img src="linkedin.png" class="linkedin"/></a>
-            <a href="//github.com/millenaSui" target="_blank"><img src="git.png" class="github"/></a>
-            <a href="mailto:comercial.millena.costa@outlook.com" target="_blank"><img src="email.png" class="email"/></a>
+            <a href="//www.linkedin.com/in/millena-costa-" target="_blank"><img src="./css/icons/linkedin.png" class="linkedin"/></a>
+            <a href="//github.com/millenaSui" target="_blank"><img src="./css/icons/git.png" class="github"/></a>
+            <a href="mailto:comercial.millena.costa@outlook.com" target="_blank"><img src="./css/icons/email.png" class="email"/></a>
         </section>
 
         <section id="sobre" class="about-section">
@@ -62,42 +69,79 @@
         </section>
 
         <section id="projetos" class="projetos-section">
-            <div class="subtitle-text">
+            <div class="carousel-text-title">
                 <h1>Projetos</h1>
             </div>
             <div class="carousel-container">
                 <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
                 <div class="carousel">
                     <div class="carousel-slide">
-                        <img src="imagem1.jpg" alt="Imagem 1">
-                        <p class="carousel-text">PET COMPUTAÇÃO</p>
+                        <div class="carousel-content">
+                            <div class="carousel-heading-title">
+                                <h2>PET Computação</h2>
+                            </div>
+                            <div class="carousel-text-description">
+                                <p>Manutenção da plataforma web do programa e do repositório online de exercícios e provas da UFPR (FAROL), reformulação da identidade visual do programa e sua aplicação em redes sociais, monitoria aos estudantes em processo de aprendizado à linguagem C++ e organização de eventos educativos sobre linguagens de programação e ferramentas computacionais.</p>
+                            </div>
+                        </div>
+                        <img src="./css/projects-images/imagem1.png" alt="Imagem 1">
                     </div>
+        
                     <div class="carousel-slide">
-                        <img src="imagem2.jpg" alt="Imagem 2">
-                        <p class="carousel-text">ROADSEC 2023</p>
+                        <div class="carousel-content">
+                            <div class="carousel-heading-title">
+                                <h2>Roadie Voluntaria</h2>
+                            </div>
+                            <div class="carousel-text-description">
+                                <p>No ano de 2023 integrei o time de voluntários do maior festival hacker da américa latina (Roadsec). Nesse fui responsável por liderar o palco ataque e coordenar as suas sessões de conteúdo.</p>
+                            </div>
+                        </div>
+                        <img src="./css/projects-images/imagem2.png" alt="Imagem 2">
                     </div>
+        
                     <div class="carousel-slide">
-                        <img src="imagem3.jpg" alt="Imagem 3">
-                        <p class="carousel-text">MARATONAS DE PROGRAMAÇÃO</p>
+                        <div class="carousel-content">
+                            <div class="carousel-heading-title">
+                                <h2>Programação Competitiva</h2>
+                            </div>
+                            <div class="carousel-text-description">
+                                <p>Durante os dois anos em que estive na equipe Capimara (Competidores Pirados em Maratona), me dediquei a treinamentos focados nas participações em maratonas de programação competitiva, totalizando duas participações na maratona da Sociedade Brasileira de Computação (SBC) e uma participação na Maratona Feminina de Programação (MFP).</p>
+                            </div>
+                        </div>
+                        <img src="./css/projects-images/imagem3.png" alt="Imagem 3">
                     </div>
+        
                     <div class="carousel-slide">
-                        <img src="imagem4.jpg" alt="Imagem 4">
-                        <p class="carousel-text">PATINHO</p>
+                        <div class="carousel-content">
+                            <div class="carousel-heading-title">
+                                <h2>Patinho</h2>
+                            </div>
+                            <div class="carousel-text-description">
+                                <p>Não é um projeto, mas é um patinho bonito =)</p>
+                            </div>
+                        </div>
+                        <img src="./css/projects-images/imagem4.png" alt="Imagem 4">
                     </div>
                 </div>
                 <button class="next" onclick="moveSlide(1)">&#10095;</button>
             </div>
-
-            <script>
-                let slideIndex = 0;
-                function moveSlide(n) {
-                    let slides = document.querySelectorAll('.carousel-slide');
-                    slideIndex += n;
-                    if (slideIndex >= slides.length) slideIndex = 0;
-                    if (slideIndex < 0) slideIndex = slides.length - 1;
-                    document.querySelector('.carousel').style.transform = `translateX(${-slideIndex * 100}%)`;
-                }
-            </script>
         </section>
+        
+        <script>
+            let slideIndex = 0;
+            function moveSlide(n) {
+                let slides = document.querySelectorAll('.carousel-slide');
+                slideIndex += n;
+                if (slideIndex >= slides.length) slideIndex = 0;
+                if (slideIndex < 0) slideIndex = slides.length - 1;
+                document.querySelector('.carousel').style.transform = `translateX(${-slideIndex * 100}%)`;
+            }
+        </script>
+
+        <footer>
+            <div class="footer-text">
+                <p>© 2025 Millena Suiani Costa</p>
+            </div>
+        </footer>
     </body>
 </html>
