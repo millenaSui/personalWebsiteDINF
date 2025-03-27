@@ -16,14 +16,14 @@
 
     <body>
         <header>
-            <a href="./index.html" class="logo"><p>MSC</p></a>
+            <a href="#home" class="logo"><p>MSC</p></a>
             <nav class="menu right-menu">
-                <a href="./sobre.html">SOBRE</a>
-                <a href="./projetos.html">PROJETOS</a>
+                <a href="#sobre">SOBRE</a>
+                <a href="#projetos">PROJETOS</a>
             </nav>
         </header>
 
-        <section class="general-text">
+        <section id="home" class="general-text">
             <div class="title-text">
                 <h1>Millena Suiani Costa</h1>
             </div>
@@ -33,56 +33,71 @@
             <nav class="links">
                 <div id="curriculum-modal" class="modal">
                     <img src="curriculum.png" alt="curriculum">
-                    <script src="script.js"></script>
                     <span class="close-modal" data-modal="curriculum-modal">&times;</span>
                 </div>
-                <a href="#" id="curriculum-link" target="_blank" class="rounded-link">CURRICULUM VITAE</a>
+                <a href="#" id="curriculum-link" class="rounded-link">CURRICULUM VITAE</a>
                 <a href="http://lattes.cnpq.br/5284996494544920" target="_blank" class="rounded-link">CURRÍCULO LATTES</a>
             </nav>
         </section>
 
-        <footer>
+        <section id="links-icons" class="links-icons-section">
             <a href="//www.linkedin.com/in/millena-costa-" target="_blank"><img src="linkedin.png" class="linkedin"/></a>
             <a href="//github.com/millenaSui" target="_blank"><img src="git.png" class="github"/></a>
-            <a href="mailto:comercial.millena.costa@outlook.com" target="_blank"><img src="email.png" class="email"/></spam></p>
-        </footer>
+            <a href="mailto:comercial.millena.costa@outlook.com" target="_blank"><img src="email.png" class="email"/></a>
+        </section>
 
-        <script>
+        <section id="sobre" class="about-section">
+            <div class="about-section-title">
+                <h1>Sobre Mim</h1>
+            </div>
+            <nav class="about-section-description-text">
+                <p>Técnica em administração por curso integrado ao ensino médio pelo Instituto Federal no Paraná (IFPR) e cursando bacharelado em Ciência da Computação pela Universidade Federal do Paraná (UFPR).</p>
+                <br>
+                <p>Desde o meu primeiro semestre na faculdade integrei o Programa de Educação Tutorial do curso (PET Computação) e, durante cerca de dois anos, me dediquei às atividades de manutenção da plataforma web do programa e do repositório online de exercícios e provas da UFPR (FAROL), de reformulação da identidade visual do programa e sua aplicação em redes sociais, de monitoria aos estudantes em processo de aprendizado à linguagem C++ e de organização de eventos educativos sobre linguagens de programação e ferramentas computacionais.</p>
+                <br>            
+                <p>Durante o tempo em que estive no projeto, integrei, também, o grupo Capimara (Competidores Pirados em Maratona), com foco principal nas práticas e treinamentos para as maratonas de programação competitiva, tendo participado (ao longo desse período) em duas competições organizadas pela Sociedade Brasileira de Computação (SBC) e em uma das Maratonas Femininas de Programação (MFP).</p>
+                <br>            
+                <p>No meu terceiro ano de faculdade tive a oportunidade de ingressar como estagiária no Point of Presence (PoP) da Rede Nacional de Pesquisa (RNP) no Paraná e, com isso, ter um contato mais aprofundado com as áreas de engenharia de software, gerenciamento de redes, DevOps, segurança da informação e, com aquela que se tornou o meu foco e, felizmente, pude seguir como técnica após a minha efetivação no cargo: a área de dados.</p>
+            </nav>
+        </section>
 
-            // Adicione um evento de clique ao link "CURRICULUM VITAE"
-            document.getElementById("curriculum-link").addEventListener('click', function(e) {
-                e.preventDefault(); // Impede o comportamento padrão do link
-                const modalId = 'curriculum-modal'; // Altere para o modal desejado
-                openModal(modalId);
-            });
+        <section id="projetos" class="projetos-section">
+            <div class="subtitle-text">
+                <h1>Projetos</h1>
+            </div>
+            <div class="carousel-container">
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <div class="carousel">
+                    <div class="carousel-slide">
+                        <img src="imagem1.jpg" alt="Imagem 1">
+                        <p class="carousel-text">PET COMPUTAÇÃO</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="imagem2.jpg" alt="Imagem 2">
+                        <p class="carousel-text">ROADSEC 2023</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="imagem3.jpg" alt="Imagem 3">
+                        <p class="carousel-text">MARATONAS DE PROGRAMAÇÃO</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="imagem4.jpg" alt="Imagem 4">
+                        <p class="carousel-text">PATINHO</p>
+                    </div>
+                </div>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
 
-            //Função para abrir modal
-            function openModal(modalId) {
-                document.getElementById(modalId).style.display = "block";
-            }
-    
-            // Função para fechar modal
-            function closeModal(modalId) {
-                document.getElementById(modalId).style.display = "none";
-            }
-    
-            // Adicione um evento de clique às imagens
-            const modalTriggers = document.querySelectorAll('.modal-trigger');
-            modalTriggers.forEach((trigger) => {
-                trigger.addEventListener('click', () => {
-                    const modalId = trigger.getAttribute('data-modal');
-                    openModal(modalId);
-                });
-            });
-    
-            // Adicione um evento de clique para fechar os modais
-            const closeButtons = document.querySelectorAll('.close-modal');
-            closeButtons.forEach((button) => {
-                button.addEventListener('click', () => {
-                    const modalId = button.getAttribute('data-modal');
-                    closeModal(modalId);
-                });
-            });
-        </script>
+            <script>
+                let slideIndex = 0;
+                function moveSlide(n) {
+                    let slides = document.querySelectorAll('.carousel-slide');
+                    slideIndex += n;
+                    if (slideIndex >= slides.length) slideIndex = 0;
+                    if (slideIndex < 0) slideIndex = slides.length - 1;
+                    document.querySelector('.carousel').style.transform = `translateX(${-slideIndex * 100}%)`;
+                }
+            </script>
+        </section>
     </body>
 </html>

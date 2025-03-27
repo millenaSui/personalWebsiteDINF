@@ -77,15 +77,16 @@ a {
     font-family: 'Ginqail', serif;
     font-size: 70px;
     text-align: center;
-    padding-top: 6%;
+    padding-top: 8%;
     color: #332929;
 }
 
 .subtitle-text {
     font-family: 'Ginqail', serif;
-    font-size: 35px;
+    font-size: 50px;
     text-align: center;
-    padding-top: 4%;
+    padding-top: 5%;
+    padding-bottom: 1%;
     color: #332929;
 }
 
@@ -106,8 +107,8 @@ a {
     font-weight: 400;
     text-align: center;
     margin-top: 20px;
-    margin-bottom: 7%;
-    padding: 0 30%;
+    margin-bottom: 5%;
+    padding: 0 28%;
     color: #332929;
 }
 
@@ -196,16 +197,16 @@ a {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 }
 
-/*Tags do rodapé*/
-footer {
+.links-icons-section {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-footer a {
+.links-icons-section a {
     margin: 0 10px;
     margin-top: 20px;
+    margin-bottom: 15%;
 }
 
 .links {
@@ -226,4 +227,99 @@ footer a {
     text-decoration: none;  
     color: #332929;
     margin: 0 15px;
+}
+
+.about-section {
+    background-color: #332929be; /* Cor de fundo diferente */
+    padding: 100px 20px;
+    font-family: 'MPLUS1', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    color: #d1c2c2;
+}
+
+.about-section-title {
+    font-family: 'Ginqail', serif;
+    font-size: 50px;
+    text-align: center;
+    color: #d1c2c2;
+    padding-bottom: 3%;
+}
+
+.about-section-description-text {
+    font-family: 'MPLUS1', sans-serif;
+    font-size: 19px;
+    font-weight: 350;
+    text-align: center;
+    padding: 0 24%;
+    color: #d1c2c2;
+}
+
+/* Estilização do container do carrossel */
+.carousel-container {
+    position: relative;
+    width: 80%;
+    max-width: 1000px;
+    margin: 30px auto;
+    overflow: hidden;
+    margin-top: 2%;
+}
+
+/* Estilização da área deslizante */
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    margin-bottom: 10%;
+    margin-top:2%;
+}
+
+/* Cada slide */
+.carousel-slide {
+    min-width: 100%;
+    text-align: center;
+    border-radius: 45px;
+    background-color: #3329297e;
+}
+
+/* Todas as imagens terão o mesmo tamanho */
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 45px;
+}
+
+/* Estilização dos botões de navegação */
+.prev, .next {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: #d1c2c2;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 100%;
+    z-index: 2; /* Garante que os botões fiquem acima do conteúdo */
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-text {
+    font-family: 'MPLUS1', sans-serif;
+    font-size: 25px;
+    font-weight: 350;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: #d1c2c2;
 }
